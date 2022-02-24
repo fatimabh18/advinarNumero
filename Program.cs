@@ -18,19 +18,24 @@ public class Program
             {
                 Console.WriteLine("¡ENHORABUENA!. Has adivinado el número");
             }
-            else if (numero > numeroParaAdivinar)
+            else 
             {
-                Console.WriteLine("El número a adivinar es menor que el número introducido");
-                numeroOportunidadesQueLleva++;
-            }
-            else  
-            {
-                Console.WriteLine("El número a adivinar es mayor que el número introducido");
-                numeroOportunidadesQueLleva++;
+                if (numero > numeroParaAdivinar)
+                 {
+                    Console.WriteLine("El número a adivinar es menor que el número introducido");
+                    numeroOportunidadesQueLleva++;
+                 }
+                 
+                 else if (numero < numeroParaAdivinar)
+                 {
+                    Console.WriteLine("El número a adivinar es mayor que el número introducido");
+                    numeroOportunidadesQueLleva++;
+                 }
+                 
             }
         } while(numeroOportunidadesQueLleva <= oportunidadesTotales && numero != numeroParaAdivinar);
 
-        if ( numeroOportunidadesQueLleva >= oportunidadesTotales)
+        if ( numeroOportunidadesQueLleva >= oportunidadesTotales && numero != numeroParaAdivinar)
         {
             Console.WriteLine("Perdiste, se acabaron los 3 intentos");
             Console.WriteLine($"El numero a adivinar era {numeroParaAdivinar}");
