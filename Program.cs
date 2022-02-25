@@ -22,12 +22,14 @@ public class Program
             {
                 if (numero > numeroParaAdivinar)
                  {
+                    Console.Clear();
                     Console.WriteLine("El número a adivinar es menor que el número introducido");
                     numeroOportunidadesQueLleva++;
                  }
                  
                  else if (numero < numeroParaAdivinar)
                  {
+                    Console.Clear();
                     Console.WriteLine("El número a adivinar es mayor que el número introducido");
                     numeroOportunidadesQueLleva++;
                  }
@@ -37,6 +39,7 @@ public class Program
 
         if ( numeroOportunidadesQueLleva >= oportunidadesTotales && numero != numeroParaAdivinar)
         {
+            Console.Clear();
             Console.WriteLine("Perdiste, se acabaron los 3 intentos");
             Console.WriteLine($"El numero a adivinar era {numeroParaAdivinar}");
         }
